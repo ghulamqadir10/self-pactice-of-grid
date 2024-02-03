@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+            grid-gap: 10px;     
+            grid-auto-rows: 200px;
+            grid-auto-columns: auto;
+            
+            
+            
+        }    
+        .items{
+            background-color: coral;
+            border: 2px solid black;
+            border-radius: 10px;
+            
+          
+            
+            
+
+        }
+        #item-1{
+            grid-column-start: 1;
+        grid-column-end: 7;
+         
+        }
+        .item-1-container{
+            background-color: blue;
+            display: grid;
+          
+            grid-template-columns: repeat(3,1fr);
+           
+        }
+        .nested-item{
+            border :3px solid greenyellow;
+            border-radius: 4px;
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item-1-container" id="item-1">
+            <div class="nested-item">dabba 1</div>
+            <div class="nested-item">dabba 2</div>
+            <div class="nested-item">dabba 3</div>
+        </div>
+        <div class="items">box 2</div>
+        <div class="items">box 3</div>
+        <div class="items">box 4</div>
+        <div class="items">box 7</div>  
+    </div>
+</body>
+</html>
